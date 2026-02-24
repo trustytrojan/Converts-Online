@@ -22,13 +22,13 @@ export default function UnifiedHeader() {
       res.json()
     );
 
-  const {
+  /*const {
     data: userInfo,
     error,
     isLoading,
   } = useSWR(apiroot3 + "/account/info/", fetcher);
   const username = userInfo?.username || "";
-  const isLoggedIn = !!username && !error;
+  const isLoggedIn = !!username && !error;*/
 
   useEffect(() => {
     function handleClickOutside(event) {

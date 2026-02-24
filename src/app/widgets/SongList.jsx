@@ -51,16 +51,18 @@ export default function SongList({ url, setMax, page, isRanking, isManage }) {
             : <CoverPic id={o.id} />}
 
           <div className="songInfo">
-            <Tippy content={o.title}>
+            <Tippy content={"Title: " + o.title}>
               <div className="songTitle" id={o.id}>
-                <a href={"/song?id=" + o.id}>{o.title}</a>
+                {/* <a href={"/song?id=" + o.id}>{o.title}</a> */}
+                {o.title}
               </div>
             </Tippy>
-            <Tippy content={o.artist}>
+            <Tippy content={"Artist: " + o.artist}>
               <div className="songArtist">
-                <a href={"/song?id=" + o.id}>
+                {o.artist}
+                {/* <a href={"/song?id=" + o.id}>
                   {o.artist == "" || o.artist == null ? "-" : o.artist}
-                </a>
+                </a> */}
               </div>
             </Tippy>
             <Tippy content={"Designed by: " + o.designer}>

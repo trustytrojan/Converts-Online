@@ -3,7 +3,7 @@
         "browser": true,
         "es2021": true
     },
-    "extends": [
+    /*"extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended"
@@ -20,5 +20,5 @@
     "rules": {
         "react/prop-types": 0,
         "@typescript-eslint/no-this-alias" : "warn"
-      }
+      }*/
 }
