@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { MakeLevelClickCallback } from "../utils";
+// import { MakeLevelClickCallback } from "../utils";
 import { renderLevel } from "../utils";
 
 export default function Levels({ levels, songid, isPlayer }) {
@@ -9,14 +9,14 @@ export default function Levels({ levels, songid, isPlayer }) {
       levels[i] = "-";
     }
   }*/
-  const levelClickCallback = MakeLevelClickCallback(songid, isPlayer);
+  // const levelClickCallback = MakeLevelClickCallback(songid, isPlayer);
 
   if (levels.length === 1) {
     // this is an utage
     return (
       <div
         className="songLevel"
-        onClick={levelClickCallback}
+        // onClick={levelClickCallback}
       >
         {renderLevel(levels[0])}
       </div>
@@ -29,7 +29,7 @@ export default function Levels({ levels, songid, isPlayer }) {
           className="songLevel"
           // add 1 since converts don't have "easy" difficulties
           id={'lv' + (levelIndex + 1)}
-          onClick={levelClickCallback}
+          // onClick={levelClickCallback}
         >
           {renderLevel(levels[levelIndex])}
         </div>

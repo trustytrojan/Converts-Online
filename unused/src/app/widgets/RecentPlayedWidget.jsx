@@ -1,9 +1,9 @@
 import useSWR from "swr";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import LazyLoad from "react-lazy-load";
-import { CoverPic, Level } from "./";
+import { CoverPic, Level } from "../../../../src/app/widgets";
 import React from "react";
-import { getComboState, loc } from "../utils";
+import { getComboState, loc } from "../../../../src/app/utils";
 
 export default function RecentPlayed({ username }) {
   const fetcher = async (...args) =>

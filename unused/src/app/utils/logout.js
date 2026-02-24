@@ -1,4 +1,4 @@
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 
 /**
  * 统一的登出处理函数

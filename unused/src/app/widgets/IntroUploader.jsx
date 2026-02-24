@@ -2,13 +2,13 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import "github-markdown-css/github-markdown-dark.css";
 import useSWR from "swr";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import { toast } from "react-toastify";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { loc } from "../utils";
-import sleep from "../utils/sleep";
-import getUsername from "../utils/getUsername";
+import { loc } from "../../../../src/app/utils";
+import sleep from "../../../../src/app/utils/sleep";
+import getUsername from "../../../../src/app/utils/getUsername";
 
 export default function IntroUploader() {
   const [intro, setIntro] = useState("");

@@ -1,6 +1,6 @@
 // 从JSON文件加载活动数据
 import eventsData from "./events.json";
-import { getTranslatedString as loc } from "./getTranslatedString";
+import { getTranslatedString as loc } from "../../../../src/app/utils/getTranslatedString";
 
 // 获取所有活动数据
 export function getAllEvents() {

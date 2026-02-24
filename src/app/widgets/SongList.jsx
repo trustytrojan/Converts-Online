@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import useSWR from "swr";
 import { loc } from "../utils";
-import { CoverPic, InteractCount, Levels, TagManageWidget } from "../widgets";
+import { CoverPic, /*InteractCount,*/ Levels, /*TagManageWidget*/ } from "../widgets";
 import { downloadSong } from "../download";
 import LazyLoad from "react-lazy-load";
 import Tippy from "@tippyjs/react";
@@ -11,9 +10,34 @@ import { apiroot3 } from "../apiroot";
 import { toast } from "react-toastify";
 
 export default function SongList({ url, setMax, page, isRanking, isManage }) {
-  const { data, error, isLoading } = useSWR(url, fetcher, {
-    revalidateOnFocus: false,
-  });
+  const [data, setData] = React.useState(null);
+  const [error, setError] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    if (!url) return;
+    const controller = new AbortController();
+    let isMounted = true;
+
+    setIsLoading(true);
+    setError(null);
+
+    fetcher(url, controller.signal)
+      .then((payload) => {
+        if (isMounted) setData(payload);
+      })
+      .catch((err) => {
+        if (isMounted && err?.name !== "AbortError") setError(err);
+      })
+      .finally(() => {
+        if (isMounted) setIsLoading(false);
+      });
+
+    return () => {
+      isMounted = false;
+      controller.abort();
+    };
+  }, [url]);
   console.log(url);
   if (error) return <div className="notReady">{loc("ServerError")}</div>;
   if (isLoading) {
@@ -118,8 +142,8 @@ export default function SongList({ url, setMax, page, isRanking, isManage }) {
   return <div className="songCardContainer">{list}</div>;
 }
 
-const fetcher = (url) =>
-  fetch(url, { mode: "cors", credentials: "include" }).then((res) =>
+const fetcher = (url, signal) =>
+  fetch(url, { mode: "cors", credentials: "include", signal }).then((res) =>
     res.json()
   );
 

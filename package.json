@@ -19,7 +19,6 @@
     "js-md5": "^0.8.3",
     "jszip": "^3.10.1",
     "next": "^14.2.31",
-    "next-pwa": "^5.6.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",
@@ -31,7 +30,6 @@
     "remark-breaks": "^4.0.0",
     "remark-gfm": "^4.0.1",
     "swiper": "^11.2.10",
-    "swr": "^2.2.4",
     "tippy.js": "^6.3.7",
     "use-debounce": "^10.0.0",
     "webgl-nextjs": "^1.0.6"

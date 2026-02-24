@@ -1,8 +1,8 @@
 import { toast } from "react-toastify";
 import axios from "axios";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import React, { useCallback, useRef, useState } from "react";
-import { getUsername, loc, sleep } from "../utils";
+import { getUsername, loc, sleep } from "../../../../src/app/utils";
 
 export default function AvatarUploader() {
   const [isUploading, setIsUploading] = useState(false);

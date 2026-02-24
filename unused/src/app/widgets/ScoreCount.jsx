@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import useSWR from "swr";
-import { loc } from "../utils";
+import { loc } from "../../../../src/app/utils";
 
 export default function ScoreCount({uploader, page, pageSize}) {
   const { data, error, isLoading } = useSWR(

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import useSWR from "swr";
+// import useSWR from "swr";
 import { MajdataLogo } from "./index";
 import { loc } from "../utils";
 import { apiroot3 } from "../apiroot";

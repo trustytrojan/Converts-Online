@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getActiveEvents, isEventOngoing, isEventUpcoming } from "../utils/eventsData";
-import { loc } from "../utils";
+import { getActiveEvents, isEventOngoing, isEventUpcoming } from "../../../../src/app/utils/eventsData";
+import { loc } from "../../../../src/app/utils";
 
 // 时间轴甘特图弹窗组件
 export default function TimelineModal({ isOpen, onClose }) {

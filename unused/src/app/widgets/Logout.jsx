@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import React from "react";
-import { loc } from "../utils";
+import { loc } from "../../../../src/app/utils";
 
 export default function Logout() {
   const router = useRouter();

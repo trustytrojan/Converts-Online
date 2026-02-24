@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import useSWR from "swr";
-import { loc } from "../utils";
-import mmfcParticipants from "../utils/mmfc-participants.json";
+import { loc } from "../../../../src/app/utils";
+import mmfcParticipants from "../../../../src/app/utils/mmfc-participants.json";
 
 export default function MMFCScoreCount() {
   // 从JSON文件获取参与者列表

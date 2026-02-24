@@ -1,5 +1,5 @@
 import React from "react";
-import { loc } from "../utils";
+import { loc } from "../../../../src/app/utils";
 
 const EventsFilter = ({ selectedCategory, onCategoryChange, categories }) => {
   // 获取category的翻译

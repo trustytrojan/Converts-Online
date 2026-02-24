@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import useSWR from "swr";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 
 const fetcher = async (...args) =>
   await fetch(...args).then(async (res) => res.json());

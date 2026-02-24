@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { MakeLevelClickCallback } from "../utils";
-import { renderLevel } from "../utils";
+import { MakeLevelClickCallback } from "../../../../src/app/utils";
+import { renderLevel } from "../../../../src/app/utils";
 
 export default function SongDifficultyLevels({ levels, songid, isPlayer }) {
   // 处理空值

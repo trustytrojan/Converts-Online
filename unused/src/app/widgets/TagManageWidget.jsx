@@ -9,9 +9,9 @@ import React from "react";
 import { createPortal } from "react-dom";
 import Tippy from "@tippyjs/react";
 import useSWR from "swr";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import { toast } from "react-toastify";
-import { loc, sleep } from "../utils";
+import { loc, sleep } from "../../../../src/app/utils";
 
 const TagManageWidget = forwardRef(
   function TagManageWidget({ songid, newClassName = "" }, ref) {

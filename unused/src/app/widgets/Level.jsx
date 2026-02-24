@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MakeLevelClickCallback } from "../utils";
+import { MakeLevelClickCallback } from "../../../../src/app/utils";
 
 export default function Level({ level, difficulty, songid, isPlayer }) {
   const levelClickCallback = MakeLevelClickCallback(songid, isPlayer);

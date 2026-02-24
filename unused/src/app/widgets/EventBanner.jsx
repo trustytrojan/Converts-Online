@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { IoChevronUpOutline } from "react-icons/io5";
-import { loc } from "../utils";
+import { loc } from "../../../../src/app/utils";
 import EnhancedDescription from "./EnhancedDescription";
 
 const EventBanner = memo(({ event }) => {

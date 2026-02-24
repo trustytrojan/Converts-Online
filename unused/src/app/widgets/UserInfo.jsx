@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import useSWR from "swr";
-import { apiroot3 } from "../apiroot";
-import { loc } from "../utils";
+import { apiroot3 } from "../../../../src/app/apiroot";
+import { loc } from "../../../../src/app/utils";
 
 const fetcher = (url) =>
   fetch(url, { mode: "cors", credentials: "include" }).then((res) =>
