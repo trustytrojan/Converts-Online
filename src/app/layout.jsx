@@ -8,8 +8,8 @@ import LanguageInitializer from "./widgets/LanguageInit";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Majdata Net",
-  description: "Majdata Net is a place to share maimai fanmade charts",
+  title: "ADX Converts",
+  description: "ADX Converts is a place to browse maimai converted charts",
   generator: "Next.js",
   manifest: "/manifest.webmanifest",
   keywords: ["majdata", "simai", "maimai", "fanmade"],
@@ -23,8 +23,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <meta name="theme-color" content="#FFFFFF" />
-      <meta name="google-adsense-account" content="ca-pub-7973799234411834">
-      </meta>
+      {/* <meta name="google-adsense-account" content="ca-pub-7973799234411834">
+      </meta> */}
       <link rel="icon" type="image/x-icon" href="favicon.ico" />
       <Suspense>
         <body className={inter.className}>

@@ -2,7 +2,7 @@
 
 export const apiroot1 = '/api1/api'
 export const apiroot2 = '/api2/api'
-export const apiroot3 = '/api3/api'
+export const apiroot3 = 'https://api.trustytrojan.dev/adx/converts'
 
 //DEBUG
 //export const apiroot3 = 'http://localhost:5022/api'

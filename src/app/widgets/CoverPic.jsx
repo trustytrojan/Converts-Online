@@ -6,8 +6,8 @@ import "react-photo-view/dist/react-photo-view.css";
 
 export default function CoverPic({ id, display }) {
   const [isLoaded,setIsLoaded] = React.useState(false);
-  let url = apiroot3 + `/maichart/${id}/image`;
-  let urlfull = apiroot3 + `/maichart/${id}/image?fullImage=true`;
+  let url = apiroot3 + `/${id}/image?proxy=1`;
+  let urlfull = apiroot3 + `/${id}/image?fullImage=true&proxy=1`;
   let idDisplay = null;
   if (display) {
     idDisplay = <div className="songId">{display}</div>;

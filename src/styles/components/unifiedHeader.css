@@ -83,6 +83,11 @@
     align-items: center;
     gap: 2rem;
     flex: 1;
+
+    /* @trustytrojan: center the "ADX Converts" title at all times */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   .header-logo {

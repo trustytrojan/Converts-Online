@@ -32,7 +32,7 @@ export default function Majdata({ songid, apiroot, level }) {
       if (!root.startsWith("http")) {
         root = httpprefix + root;
       }
-      const maichart = root + "/maichart/" + songid;
+      const maichart = root + "/" + songid;
       const maidata = maichart + "/chart";
       const track = maichart + "/track";
       const bg = maichart + "/image?fullImage=true";

@@ -171,7 +171,7 @@ const TagManageWindow = forwardRef(
       );
 
     const { data, error, isLoading } = useSWR(
-      apiroot3 + "/maichart/" + songid + "/summary",
+      apiroot3 + "/" + songid + "/summary",
       fetcher,
     );
 
@@ -200,7 +200,7 @@ const TagManageWindow = forwardRef(
         hideProgressBar: true,
       });
       const response = await fetch(
-        apiroot3 + "/maichart/" + songid + (
+        apiroot3 + "/" + songid + (
           isInPrivatePage ? "/tags" : "/publictags"
         ),
         {

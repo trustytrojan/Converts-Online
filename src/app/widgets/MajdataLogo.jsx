@@ -6,7 +6,7 @@ import { loc } from "../utils";
 export default function MajdataLogo() {
   return (
     <h1 style={{fontFamily :'fantasy'}}>
-      <img
+      {/* <img
         className="xxlb-big"
         src="../../../salt.webp"
         onClick={() =>
@@ -16,8 +16,8 @@ export default function MajdataLogo() {
           })}
         alt="xxlb"
       >
-      </img>
-      Majdata.Net
+      </img> */}
+      ADX Converts
     </h1>
   );
 }

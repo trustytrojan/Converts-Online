@@ -2026,6 +2026,8 @@ img.songImg {
 }
 
 .search-bar {
+  /* @trustytrojan: needs margin after removing EventCarousel */
+  margin-top: 1rem;
   width: 100%;
 }
 

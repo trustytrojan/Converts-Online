@@ -44,7 +44,7 @@ export default function ChartUploader() {
     }
     try {
       const response = await axios.post(
-        apiroot3 + "/maichart/upload",
+        apiroot3 + "/upload",
         formData,
         {
           onUploadProgress: function (progressEvent) {

@@ -52,7 +52,7 @@ export default function Page() {
       {/* 自定义背景 - 覆盖PageLayout的默认背景 */}
       <div
         className="bg song-bg"
-        style={{ backgroundImage: `url(${apiroot3}/maichart/${param}/image)` }}
+        style={{ backgroundImage: `url(${apiroot3}/${param}/image)` }}
       ></div>
 
       <Tippy
@@ -88,7 +88,7 @@ function SongInfo({ id, tippy }) {
   const tagButtonRef = useState();
   const [isLoadMajdata, setIsLoadMajdata] = useState(false);
   const { data, error, isLoading } = useSWR(
-    apiroot3 + "/maichart/" + id + "/summary",
+    apiroot3 + "/" + id + "/summary",
     fetcher,
   );
   if (error) {
@@ -380,7 +380,7 @@ function SongInfo({ id, tippy }) {
 
 function MajdataView({ id }) {
   const { data, error, isLoading } = useSWR(
-    apiroot3 + "/maichart/" + id + "/summary",
+    apiroot3 + "/" + id + "/summary",
     fetcher,
   );
   if (error) {
@@ -411,7 +411,7 @@ function LikeSender({ songid }) {
   const [isLikeLoading, setIsLikeLoading] = useState(false);
   const [isDislikeLoading, setIsDislikeLoading] = useState(false);
   const { data, error, isLoading, mutate } = useSWR(
-    apiroot3 + "/maichart/" + songid + "/interact",
+    apiroot3 + "/" + songid + "/interact",
     fetcher,
   );
   if (error) {
@@ -448,7 +448,7 @@ function LikeSender({ songid }) {
 
     try {
       const response = await fetch(
-        apiroot3 + "/maichart/" + songid + "/interact",
+        apiroot3 + "/" + songid + "/interact",
         {
           method: "POST",
           body: formData,
@@ -698,7 +698,7 @@ function CommentComposer({
 function CommentSender({ songid }) {
   const [comment, setComment] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { mutate } = useSWR(apiroot3 + "/maichart/" + songid + "/interact");
+  const { mutate } = useSWR(apiroot3 + "/" + songid + "/interact");
 
   const onSubmit = async () => {
     if (comment.trim() === "") {
@@ -715,7 +715,7 @@ function CommentSender({ songid }) {
 
     try {
       const response = await fetch(
-        apiroot3 + "/maichart/" + songid + "/interact",
+        apiroot3 + "/" + songid + "/interact",
         {
           method: "POST",
           body: formData,
@@ -1160,7 +1160,7 @@ function CommentList({ songid }) {
   const [expandedComments, setExpandedComments] = useState(new Set());
 
   // 获取当前用户信息
-  useEffect(() => {
+  /*useEffect(() => {
     fetch(apiroot3 + "/account/info/", {
       mode: "cors",
       credentials: "include",
@@ -1175,10 +1175,10 @@ function CommentList({ songid }) {
         // 用户未登录或获取失败
         setCurrentUser(null);
       });
-  }, []);
+  }, []);*/
 
   const { data, error, isLoading, mutate } = useSWR(
-    apiroot3 + "/maichart/" + songid + "/interact",
+    apiroot3 + "/" + songid + "/interact",
     fetcher,
     {
       refreshInterval: replyThreadId ? 0 : 3000, // 回复输入时暂停自动刷新
@@ -1258,7 +1258,7 @@ function CommentList({ songid }) {
 
     try {
       const response = await fetch(
-        apiroot3 + "/maichart/" + songid + "/interact",
+        apiroot3 + "/" + songid + "/interact",
         {
           method: "POST",
           body: formData,
@@ -1302,7 +1302,7 @@ function CommentList({ songid }) {
 
     try {
       const response = await fetch(
-        apiroot3 + "/maichart/" + songid + "/interact",
+        apiroot3 + "/" + songid + "/interact",
         {
           method: "DELETE",
           body: formData,
@@ -1391,7 +1391,7 @@ function CommentList({ songid }) {
 
 function ScoreList({ songid }) {
   const { data, error, isLoading } = useSWR(
-    apiroot3 + "/maichart/" + songid + "/score",
+    apiroot3 + "/" + songid + "/score",
     fetcher,
     { refreshInterval: 30000 },
   );

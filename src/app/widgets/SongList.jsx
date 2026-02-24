@@ -63,9 +63,10 @@ export default function SongList({ url, setMax, page, isRanking, isManage }) {
                 </a>
               </div>
             </Tippy>
-            <Tippy content={o.uploader + "@" + o.designer}>
+            <Tippy content={"Designed by: " + o.designer}>
               <div className="songDesigner">
-                <a href={"/space?id=" + o.uploader}>
+                {o.designer}
+                {/* <a href={"/space?id=" + o.uploader}>
                   <img
                     className="smallIcon"
                     src={apiroot3 + "/account/Icon?username=" + o.uploader}
@@ -75,7 +76,7 @@ export default function SongList({ url, setMax, page, isRanking, isManage }) {
                     decoding="async"
                   />
                   {o.uploader + "@" + o.designer}
-                </a>
+                </a> */}
               </div>
             </Tippy>
             {isManage
@@ -106,7 +107,7 @@ export default function SongList({ url, setMax, page, isRanking, isManage }) {
                 <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
               </svg>
             </div>
-            <InteractCount songid={o.id} />
+            {/* <InteractCount songid={o.id} /> */}
           </div>
         </div>
       </LazyLoad>
@@ -128,7 +129,7 @@ function Delbutton({ songid }) {
         let ret = confirm("真的要删除吗(不可恢复)\n(没有任何机会)");
         if (ret) {
           const response = await fetch(
-            apiroot3 + "/maichart/delete?chartId=" + songid,
+            apiroot3 + "/delete?chartId=" + songid,
             {
               method: "POST",
               mode: "cors",

@@ -70,7 +70,7 @@ export default function EventTagPage() {
             <SongList
               url={
                 apiroot3 +
-                "/maichart/list?sort=" +
+                "/list?sort=" +
                 "&search=" +
                 encodeURIComponent(searchKeyword)
               }

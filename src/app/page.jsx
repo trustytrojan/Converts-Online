@@ -45,7 +45,7 @@ export default function Page() {
   return (
     <PageLayout showBackToHome={false} className="home-page">
       {/* Events Carousel */}
-      <EventsCarousel />
+      {/* <EventsCarousel /> */}
 
       {/* Main Content */}
       <MainComp />
@@ -371,7 +371,7 @@ function SearchBar({ onChange, initS, sortType, onSortChange }) {
                   ×
                 </button>
               )}
-              <Tippy 
+              {/* <Tippy 
                 content={searchHints} 
                 placement="top" 
                 arrow={true}
@@ -394,11 +394,11 @@ function SearchBar({ onChange, initS, sortType, onSortChange }) {
                 <button className="search-hint-button" title="搜索提示">
                   ?
                 </button>
-              </Tippy>
+              </Tippy> */}
             </div>
           </div>
 
-          <div className="search-controls">
+          {/* <div className="search-controls">
             <div className="sort-selector">
               <select
                 value={
@@ -428,7 +428,7 @@ function SearchBar({ onChange, initS, sortType, onSortChange }) {
                 ))}
               </select>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -498,7 +498,7 @@ function MainComp() {
       <SongList
         url={
           apiroot3 +
-          "/maichart/list?sort=" +
+          "/list?sort=" +
           sortWords[sortType] +
           "&page=" +
           page +
@@ -560,7 +560,7 @@ function MainComp() {
         >
           {loc("FrontPage")}
         </button>
-        <IntegratedDownloadTypeSelector isMobile={true} />
+        {/* <IntegratedDownloadTypeSelector isMobile={true} /> */}
       </div>
     </>
   );

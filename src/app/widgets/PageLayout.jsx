@@ -18,14 +18,6 @@ export default function PageLayout({
 }) {
   return (
     <>
-      {/* Background */}
-      {useAmbientBackground ? (
-        <AmbientBackground />
-      ) : (
-        <div className="bg"></div>
-      )}
-
-      {/* Unified Header */}
       <UnifiedHeader />
 
       {/* Page Title */}
@@ -54,7 +46,7 @@ export default function PageLayout({
       {/* Footer */}
       {showFooter && (
         <footer className="site-footer">
-          {showAds && (
+          {/* {showAds && (
             <>
               <script
                 async
@@ -64,7 +56,7 @@ export default function PageLayout({
               </script>
               <AdComponent />
             </>
-          )}
+          )} */}
 
           {/* Footer Content */}
           <div className="footer-content">
@@ -76,30 +68,12 @@ export default function PageLayout({
             {/* Open Source Info */}
             <div className="footer-opensource">
               <a
-                href="https://github.com/LingFeng-bbben/Majdata-Online"
+                href="https://github.com/trustytrojan/Majdata-Online"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-github-link"
               >
                 {loc("FooterOpenSource")}
-              </a>
-              {" | "}
-              <a
-                href="https://discord.gg/AcWgZN7j6K"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-github-link"
-              >
-                Discord
-              </a>
-              {" | "}
-              <a
-                href="https://qun.qq.com/universal-share/share?ac=1&authKey=2m%2BXMJ2NrjiomE9CYBVp6ys1K9SjAJ3kl%2B3OCfVEff4ffLj3Z%2BYXJIBXbWJrdGvJ&busi_data=eyJncm91cENvZGUiOiI2Njc2NDQzMzgiLCJ0b2tlbiI6IjV0VTk1STl1Ti9RbmhvR0lHdVdySVVpR09DWFk3Y1JGelY0Qlg2YWFmYkxjYlhWZzZraDFUWTlyNHI5N243cG8iLCJ1aW4iOiIxMzIzMjkxMDk0In0%3D&data=oyLVI6BKjGNDg5-SEEe1Qw_DjQ3EnQSayTWrGQBDgGTxOw0_YffoTI_g4KQ3cJLbkkwkmzUxY3cWDqnRk-NTyw&svctype=4&tempid=h5_group_info"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-github-link"
-              >
-                QQ
               </a>
             </div>
 
@@ -110,14 +84,14 @@ export default function PageLayout({
           </div>
 
           {/* Mini Game Link */}
-          <a href="/minigame" className="footer-game-link">
+          {/* <a href="/minigame" className="footer-game-link">
             <img
               className="footerImage"
               loading="lazy"
               src={"/bee.webp"}
               alt={loc("MiniGame")}
             />
-          </a>
+          </a> */}
         </footer>
       )}
 

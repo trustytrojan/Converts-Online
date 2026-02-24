@@ -53,7 +53,7 @@ export default function Page() {
         <h2 className="section-title">{loc("UploadedCharts")}</h2>
         <div className="hr-solid"></div>
         <SongList
-          url={apiroot3 + "/maichart/list?search=" +
+          url={apiroot3 + "/list?search=" +
             encodeURIComponent("uploader:" + username)}
         />
       </section>

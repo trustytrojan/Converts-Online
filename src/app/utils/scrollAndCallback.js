@@ -13,7 +13,7 @@ export default function makeLevelClickCallback(songid, isPlayer) {
   return (e) => {
     if (!isPlayer) return;
     scrollToTop();
-    const maichart = apiroot3 + "/maichart/" + songid;
+    const maichart = apiroot3 + "/" + songid;
     const maidata = maichart + "/chart";
     const track = maichart + "/track";
     const bg = maichart + "/image?fullImage=true";

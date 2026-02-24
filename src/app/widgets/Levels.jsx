@@ -11,64 +11,31 @@ export default function Levels({ levels, songid, isPlayer }) {
   }
   const levelClickCallback = MakeLevelClickCallback(songid, isPlayer);
 
+  const makeLevel = (levelIndex) => (
+    levels[levelIndex]
+      ? <div
+          className="songLevel"
+          // TODO: REMOVE THIS HARDCODE, CHANGE API TO BE MORE MAJDATA-LIKE:
+          // LEVELS ARRAY SHOULD BE: [EASY, BASIC, ADVANCED, EXPERT, MASTER, RE:MASTER, UTAGE]
+          // MOST CONVERTS START AT BASIC
+          id={'lv' + (levelIndex + 1)}
+          // style={{ display: levels[0] == "-" ? "none" : "unset" }}
+          onClick={levelClickCallback}
+        >
+          {renderLevel(levels[levelIndex])}
+        </div>
+      : <div />
+  );
+
   return (
     <div>
-      <div
-        className="songLevel"
-        id="lv0"
-        style={{ display: levels[0] == "-" ? "none" : "unset" }}
-        onClick={levelClickCallback}
-      >
-        {renderLevel(levels[0])}
-      </div>
-      <div
-        className="songLevel"
-        id="lv1"
-        style={{ display: levels[1] == "-" ? "none" : "unset" }}
-        onClick={levelClickCallback}
-      >
-        {renderLevel(levels[1])}
-      </div>
-      <div
-        className="songLevel"
-        id="lv2"
-        style={{ display: levels[2] == "-" ? "none" : "unset" }}
-        onClick={levelClickCallback}
-      >
-        {renderLevel(levels[2])}
-      </div>
-      <div
-        className="songLevel"
-        id="lv3"
-        style={{ display: levels[3] == "-" ? "none" : "unset" }}
-        onClick={levelClickCallback}
-      >
-        {renderLevel(levels[3])}
-      </div>
-      <div
-        className="songLevel"
-        id="lv4"
-        style={{ display: levels[4] == "-" ? "none" : "unset" }}
-        onClick={levelClickCallback}
-      >
-        {renderLevel(levels[4])}
-      </div>
-      <div
-        className="songLevel"
-        id="lv5"
-        style={{ display: levels[5] == "-" ? "none" : "unset" }}
-        onClick={levelClickCallback}
-      >
-        {renderLevel(levels[5])}
-      </div>
-      <div
-        className="songLevel"
-        id="lv6"
-        style={{ display: levels[6] == "-" ? "none" : "unset" }}
-        onClick={levelClickCallback}
-      >
-        {renderLevel(levels[6])}
-      </div>
+      {makeLevel(0)}
+      {makeLevel(1)}
+      {makeLevel(2)}
+      {makeLevel(3)}
+      {makeLevel(4)}
+      {makeLevel(5)}
+      {makeLevel(6)}
     </div>
   );
 }

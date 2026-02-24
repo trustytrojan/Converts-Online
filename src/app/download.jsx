@@ -40,8 +40,14 @@ function downloadFile(url, fileName) {
 export async function downloadSong(props) {
   const zip = new JSZip();
 
+  // @trustytrojan: avoid slashes in filesystem paths
+  props.title = props.title.replaceAll('/', '_').replaceAll('\\', '_');
+
+  // @trustytrojan: AstroDX won't recognize raw files not in a folder
+  const songFolder = zip.folder(props.title);
+
   const track = await fetchFile(
-    apiroot3 + "/maichart/" + props.id + "/track",
+    apiroot3 + "/" + props.id + "/track?proxy=1",
     "track.mp3",
     props.toast,
   );
@@ -52,7 +58,7 @@ export async function downloadSong(props) {
   }
 
   const bg = await fetchFile(
-    apiroot3 + "/maichart/" + props.id + "/image?fullImage=true",
+    apiroot3 + "/" + props.id + "/image?fullImage=true&proxy=1",
     "bg",
     props.toast,
   );
@@ -63,7 +69,7 @@ export async function downloadSong(props) {
   }
 
   const maidata = await fetchFile(
-    apiroot3 + "/maichart/" + props.id + "/chart",
+    apiroot3 + "/" + props.id + "/chart?proxy=1",
     "maidata",
     props.toast,
   );
@@ -74,27 +80,29 @@ export async function downloadSong(props) {
   }
 
   const video = await fetchFile(
-    apiroot3 + "/maichart/" + props.id + "/video",
+    apiroot3 + "/" + props.id + "/video?proxy=1",
     "bg.mp4",
     props.toast,
   );
 
-  zip.file("track.mp3", track);
-  zip.file("bg.jpg", bg);
-  zip.file("maidata.txt", maidata);
+  songFolder.file("track.mp3", track);
+  songFolder.file("bg.jpg", bg);
+  songFolder.file("maidata.txt", maidata);
 
   if (video != undefined) {
-    zip.file("pv.mp4", video);
+    songFolder.file("pv.mp4", video);
   }
-  var downloadExtension = localStorage.getItem("DownloadType");
+
+  /*var downloadExtension = localStorage.getItem("DownloadType");
   if (downloadExtension == undefined) {
     downloadExtension = "zip";
-  }
+  }*/
+  const downloadExtension = 'adx';
 
   zip.generateAsync({ type: "blob" }).then((blob) => {
     const blb = new Blob([blob], { type: "application/" + downloadExtension });
-    const url = window.URL.createObjectURL(blb);
+    const url = URL.createObjectURL(blb);
     props.toast.success(props.title + "下载成功");
-    downloadFile(url, props.title + "." + downloadExtension);
+    downloadFile(url, props.title + '.' + downloadExtension);
   });
 }

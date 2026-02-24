@@ -7,7 +7,7 @@ import React from "react";
  * @returns JSX.Element
  */
 export function renderLevel(level) {
-  if (level.endsWith("+")) {
+  if (level?.endsWith("+")) {
     return (
       <>
         {level.substring(0, level.length - 1)}

@@ -70,7 +70,7 @@ function RankingSection({ title, subtitle, sortType }) {
       </div>
       <SongList
         url={apiroot3 +
-          "/maichart/list?&isRanking=true&sort=" +
+          "/list?&isRanking=true&sort=" +
           encodeURIComponent(sortType)}
         isRanking={true}
       />

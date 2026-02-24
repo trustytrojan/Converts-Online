@@ -8,7 +8,7 @@ const fetcher = async (...args) =>
 
 export default function InteractCount({ songid }) {
   const { data, error, isLoading } = useSWR(
-    apiroot3 + "/maichart/" + songid + "/interactsum",
+    apiroot3 + "/" + songid + "/interactsum",
     fetcher,
   );
   if (error) return <div></div>;

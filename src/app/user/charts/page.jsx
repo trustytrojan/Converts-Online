@@ -59,7 +59,7 @@ export default function Page() {
           <p className="management-subtitle">{loc("ManageAllYourCharts")}</p>
         </div>
         <SongList
-          url={apiroot3 + "/maichart/list?search=uploader:" +
+          url={apiroot3 + "/list?search=uploader:" +
             encodeURIComponent(username)}
           isManage={true}
         />
