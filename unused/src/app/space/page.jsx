@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "react-photo-view/dist/react-photo-view.css";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import "react-toastify/dist/ReactToastify.css";
 import useSWR from "swr";
 import { useSearchParams } from "next/navigation";
@@ -9,8 +9,8 @@ import { useSearchParams } from "next/navigation";
 import "github-markdown-css/github-markdown-dark.css";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { loc, setLanguage } from "../utils";
-import { PageLayout, RecentPlayed, SongList, ScoreCount } from "../widgets";
+import { loc, setLanguage } from "../../../../src/app/utils";
+import { PageLayout, RecentPlayed, SongList, ScoreCount } from "../../../../src/app/widgets";
 
 export default function Page() {
   const searchParams = useSearchParams();

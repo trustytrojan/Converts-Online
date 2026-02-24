@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import "react-photo-view/dist/react-photo-view.css";
 import "tippy.js/dist/tippy.css";
 import "react-toastify/dist/ReactToastify.css";
-import { loc, setLanguage } from "../../utils";
-import { AvatarUploader, IntroUploader, PageLayout } from "../../widgets";
+import { loc, setLanguage } from "../../../src/app/utils";
+import { AvatarUploader, IntroUploader, PageLayout } from "../../../src/app/widgets";
 
 export default function Page() {
   const [ready, setReady] = useState(false);

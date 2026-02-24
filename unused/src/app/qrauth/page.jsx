@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from "react";
 import "react-photo-view/dist/react-photo-view.css";
 import useSWR from "swr";
-import { apiroot3 } from "../apiroot";
+import { apiroot3 } from "../../../../src/app/apiroot";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { loc, setLanguage } from "../utils";
-import { PageLayout } from "../widgets";
-import * as retCode from "../apiretcode";
+import { loc, setLanguage } from "../../../../src/app/utils";
+import { PageLayout } from "../../../../src/app/widgets";
+import * as retCode from "../../../../src/app/apiretcode";
 
 export default function Page() {
   const [ready, setReady] = useState(false);

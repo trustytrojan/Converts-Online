@@ -1,3 +1,4 @@
 {
-  "allowScripts": ["npm:bcrypt@5.1.1", "npm:ttf2woff2@5.0.0", "npm:unrs-resolver@1.11.1"]
+  "allowScripts": ["npm:bcrypt@5.1.1", "npm:ttf2woff2@5.0.0", "npm:unrs-resolver@1.11.1"],
+  "nodeModulesDir": "auto"
 }

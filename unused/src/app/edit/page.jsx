@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-import { loc, setLanguage } from "../utils";
-import { PageLayout } from "../widgets";
+import { loc, setLanguage } from "../../../../src/app/utils";
+import { PageLayout } from "../../../../src/app/widgets";
 
 export default function Page() {
   const [ready, setReady] = useState(false);

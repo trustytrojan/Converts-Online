@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { setLanguage, loc } from "../utils";
-import { PageLayout, SongList } from "../widgets";
-import EventBanner from "../widgets/EventBanner";
-import { apiroot3 } from "../apiroot";
-import { getEventBySearchKeyword } from "../utils/eventsData";
+import { setLanguage, loc } from "../../../../src/app/utils";
+import { PageLayout, SongList } from "../../../../src/app/widgets";
+import EventBanner from "../../../../src/app/widgets/EventBanner";
+import { apiroot3 } from "../../../../src/app/apiroot";
+import { getEventBySearchKeyword } from "../../../../src/app/utils/eventsData";
 
 export default function EventTagPage() {
   const [ready, setReady] = useState(false);

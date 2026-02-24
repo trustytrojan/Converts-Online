@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import "react-photo-view/dist/react-photo-view.css";
 
 import "react-toastify/dist/ReactToastify.css";
-import { loc, setLanguage } from "../utils";
-import { PageLayout, ScoreCount } from "../widgets";
+import { loc, setLanguage } from "../../../../src/app/utils";
+import { PageLayout, ScoreCount } from "../../../../src/app/widgets";
 
 
 export default function Page() {

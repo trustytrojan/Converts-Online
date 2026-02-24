@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { setLanguage, loc } from "../utils";
-import { PageLayout, EnhancedDescription, TimelineModal } from "../widgets";
-import EventsFilter from "../widgets/EventsFilter";
+import { setLanguage, loc } from "../../../../src/app/utils";
+import { PageLayout, EnhancedDescription, TimelineModal } from "../../../../src/app/widgets";
+import EventsFilter from "../../../../src/app/widgets/EventsFilter";
 import {
   getEventStatusClass,
   getEventStatusText,
   getEventsWithTimeAgo,
   getCategoryTranslation,
-} from "../utils/eventsData";
+} from "../../../../src/app/utils/eventsData";
 
 export default function EventsPage() {
   const [ready, setReady] = useState(false);

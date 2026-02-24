@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import "react-photo-view/dist/react-photo-view.css";
 
-import { loc, setLanguage } from "../utils";
-import { MiniGame, PageLayout } from "../widgets";
+import { loc, setLanguage } from "../../../../src/app/utils";
+import { MiniGame, PageLayout } from "../../../../src/app/widgets";
 
 export default function Page() {
   const [ready, setReady] = useState(false);

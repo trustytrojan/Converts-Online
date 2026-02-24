@@ -2048,6 +2048,7 @@ img.songImg {
   border: 2px solid rgb(255 255 255 / 15%);
   border-radius: 30px;
   color: white;
+  caret-color: white;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   outline: none;
   position: relative;
